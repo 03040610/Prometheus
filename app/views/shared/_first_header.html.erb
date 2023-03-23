@@ -1,0 +1,14 @@
+<div class="first_header">
+  <div class="first_header1">
+    <div class="head_form">
+      <%= form_with(url: search_teachers_path, local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :keyword, placeholder: "検索する", class: "search-input" %>
+        <%= form.submit "検索", class: "search-btn" %>
+      <% end %>
+    </div>
+    <div class="btn1">
+      <a href="#" class="login_btn">ログイン</a>
+      <a href="#" class="register_btn">登録</a>
+    </div>
+  </div>
+</div>
