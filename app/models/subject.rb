@@ -9,7 +9,8 @@ class Subject < ActiveHash::Base
     { id: 7, name: 'その他' },
   ]
   include ActiveHash::Associations
-  belongs_to :literature
+  has_many :literatures
+  has_many :mathes
   has_many :teachers_subjects
   has_many :teachers, through: :teachers_subjects
 end

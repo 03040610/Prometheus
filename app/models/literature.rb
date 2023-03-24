@@ -29,7 +29,7 @@ class Literature < ActiveHash::Base
     { id: 27, name: '文法',   age: 高校生},
   ]
   include ActiveHash::Associations
-  has_many :subjects
+  belongs_to :subject
   has_many :teachers_literatures
   has_many :teachers, through: :teachers_literatures
 end
