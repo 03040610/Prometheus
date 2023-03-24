@@ -1,0 +1,34 @@
+.header1{
+  background-color: gray;
+  display: flex;
+  height: 15vh;
+  align-items: center;
+}
+
+.logo1{
+  height: 10vh;
+  width: 6vw;
+}
+
+.Key1{
+  padding: 0px 0px 0px 15vh;
+}
+
+.search-input{
+  height: 8vh;
+  width: 25vw;
+}
+
+.search-btn{
+  height: 8vh;
+  width: 5vw;
+  margin-right: 10vw;
+}
+
+.login_btn{
+  margin-right: 10vw;
+}
+
+.register_btn{
+  margin-right: 10vw;
+}
