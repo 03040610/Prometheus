@@ -1,0 +1,47 @@
+.header1{
+  background-color: gray;
+  display: flex;
+  height: 15vh;
+  align-items: center;
+}
+
+.Prometheus-icon{
+  height: 10vh;
+  width: 6vw;
+}
+
+.Key1{
+  padding: 0px 0px 0px 15vh;
+}
+
+.search-input{
+  height: 8vh;
+  width: 30vw;
+}
+
+.search-btn{
+  height: 8vh;
+  width: 5vw;
+  margin-right: 20vw;
+}
+
+.login_btn{
+  margin-right: 5vw;
+}
+
+.sign-up_btn{
+  margin-right: 5vw;
+}
+
+.teacher-nickname{
+  margin-right: 10vw;
+}
+
+.logout_btn{
+  margin-right: 10vw;
+}
+
+.hamburger-icon{
+  height: 10vh;
+  width: 6vw;
+}

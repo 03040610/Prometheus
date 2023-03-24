@@ -1,0 +1,37 @@
+<div class="first_header1">
+  <div class="header1">
+
+    <div class="Logo1">
+      <%= link_to root_path do %>
+        <%= image_tag("BMWロゴ.jpg", class: "Prometheus-icon") %>
+      <% end %>
+    </div>
+    
+    <div class="Key1">
+      <a href="#" class="key_btn1">キーワード</a>
+    </div>
+
+    <div class="form1">
+      <%= form_with(url: search_teachers_path, local: true, method: :get, class: "search-form") do |form| %>
+        <%= form.text_field :keyword, placeholder: "検索する", class: "search-input" %>
+        <%= form.submit "検索", class: "search-btn" %>
+      <% end %>
+    </div>
+   
+   <div class='btn1'>
+      <% if teacher_signed_in? %>
+        <%= link_to current_teacher.nick_name,  new_teacher_registration_path, class: "teacher-nickname" %>
+        <%= link_to 'ログアウト', destroy_teacher_session_path , method: :delete, class: "logout_btn" %>
+      <% else %>
+        <%= link_to 'ログイン', new_teacher_session_path, class: "login_btn" %>
+        <%= link_to '新規登録', new_teacher_registration_path, class: "sign-up_btn" %>
+      <% end %>
+    </div>
+
+    <div class="Hamburger_menu">
+      <%= link_to  do %>
+        <%= image_tag("ハンバーガーメニュー.png", class: "hamburger-icon") %>
+      <% end %>
+    </div>
+  </div>
+</div>
