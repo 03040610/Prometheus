@@ -12,5 +12,7 @@ class Teacher < ApplicationRecord
   validates :last_kana_name,     presence: true, format: { with: /\A[ァ-ヶー]+\z/}
   validates :birth_day,          presence: true
   validates :column,             presence: true
+  validates :images,              presence: true
 
+  has_many_attached :images
 end
