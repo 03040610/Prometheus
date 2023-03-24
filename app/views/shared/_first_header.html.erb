@@ -1,14 +1,28 @@
-<div class="first_header">
-  <div class="first_header1">
-    <div class="head_form">
+<div class="first_header1">
+  <div class="header1">
+
+    <div class="Logo1">
+      <%= image_tag 'BMW.jpg', class: 'logo1'%>
+    </div>
+    
+    <div class="Key1">
+      <a href="#" class="key_btn1">キーワード</a>
+    </div>
+
+    <div class="form1">
       <%= form_with(url: search_teachers_path, local: true, method: :get, class: "search-form") do |form| %>
         <%= form.text_field :keyword, placeholder: "検索する", class: "search-input" %>
         <%= form.submit "検索", class: "search-btn" %>
       <% end %>
     </div>
+
     <div class="btn1">
       <a href="#" class="login_btn">ログイン</a>
-      <a href="#" class="register_btn">登録</a>
+      <a href="#" class="register_btn">新規登録</a>
+    </div>
+
+    <div class="Hamburger_menu">
+      <a href="#" class="hamburger_menu1">ハンバーガーメニュー</a>
     </div>
   </div>
 </div>
