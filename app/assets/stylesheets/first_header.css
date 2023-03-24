@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.logo1{
+.Prometheus-icon{
   height: 10vh;
   width: 6vw;
 }
@@ -29,6 +29,6 @@
   margin-right: 10vw;
 }
 
-.register_btn{
+.sign-up_btn{
   margin-right: 10vw;
 }

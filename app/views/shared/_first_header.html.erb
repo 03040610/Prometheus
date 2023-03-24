@@ -2,7 +2,7 @@
   <div class="header1">
 
     <div class="Logo1">
-      <%= image_tag 'BMW.jpg', class: 'logo1'%>
+      <%= link_to image_tag("BMWロゴ.jpg", class:"Prometheus-icon"), "/" %>
     </div>
     
     <div class="Key1">
@@ -17,8 +17,8 @@
     </div>
 
     <div class="btn1">
-      <a href="#" class="login_btn">ログイン</a>
-      <a href="#" class="register_btn">新規登録</a>
+      <%= link_to 'ログイン', new_teacher_session_path, class: "login_btn" %>
+      <%= link_to '新規登録', new_teacher_registration_path, class: "sign-up_btn" %>
     </div>
 
     <div class="Hamburger_menu">

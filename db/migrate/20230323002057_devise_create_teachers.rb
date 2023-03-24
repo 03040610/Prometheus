@@ -12,6 +12,7 @@ class DeviseCreateTeachers < ActiveRecord::Migration[6.0]
       t.string :first_kana_name,    null: false
       t.string :last_kana_name,     null: false
       t.date   :birth_day,          null: false
+      t.text   :column,              null: false
 
 
       ## Recoverable
