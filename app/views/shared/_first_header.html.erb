@@ -2,7 +2,9 @@
   <div class="header1">
 
     <div class="Logo1">
-      <%= link_to image_tag("BMWロゴ.jpg", class:"Prometheus-icon"), "/" %>
+      <%= link_to root_path do %>
+        <%= image_tag("BMWロゴ.jpg", class: "Prometheus-icon") %>
+      <% end %>
     </div>
     
     <div class="Key1">
@@ -16,9 +18,14 @@
       <% end %>
     </div>
 
-    <div class="btn1">
-      <%= link_to 'ログイン', new_teacher_session_path, class: "login_btn" %>
-      <%= link_to '新規登録', new_teacher_registration_path, class: "sign-up_btn" %>
+    <div class='btn1'>
+      <% if teacher_signed_in? %>
+        <%=link_to current_teacher.nick_name,  new_teacher_registration_path, class: "teacher-nickname" %>
+        <%= link_to 'ログアウト', destroy_teacher_session_path , method: :delete, class: "logout_btn" %>
+      <% else %>
+        <%= link_to 'ログイン', new_teacher_session_path, class: "login_btn" %>
+        <%= link_to '新規登録', new_teacher_registration_path, class: "sign-up_btn" %>
+      <%end%>
     </div>
 
     <div class="Hamburger_menu">
