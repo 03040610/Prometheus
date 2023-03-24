@@ -16,21 +16,21 @@
 
 .search-input{
   height: 8vh;
-  width: 25vw;
+  width: 30vw;
 }
 
 .search-btn{
   height: 8vh;
   width: 5vw;
-  margin-right: 10vw;
+  margin-right: 20vw;
 }
 
 .login_btn{
-  margin-right: 10vw;
+  margin-right: 5vw;
 }
 
 .sign-up_btn{
-  margin-right: 10vw;
+  margin-right: 5vw;
 }
 
 .teacher-nickname{
@@ -39,4 +39,9 @@
 
 .logout_btn{
   margin-right: 10vw;
+}
+
+.hamburger-icon{
+  height: 10vh;
+  width: 6vw;
 }
