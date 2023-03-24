@@ -12,13 +12,13 @@
         <%= image_tag("キーワード.jpg", class: "Key-word-icon") %>
       <% end %>
     </div>
-
-    <div class="form1">
-      <%= form_with(url: search_teachers_path, local: true, method: :get, class: "search-form") do |form| %>
-        <%= form.text_field :keyword, placeholder: "検索する", class: "search-input" %>
-        <%= form.submit "検索", class: "search-btn" %>
-      <% end %>
-    </div>
+    
+      <div class="form1">
+        <%= form_with(url: search_teachers_path, local: true, method: :get, class: "search-form") do |form| %>
+          <%= form.text_field :keyword, placeholder: "検索する", class: "search-input" %>
+          <%= form.submit "検索", class: "search-btn" %>
+        <% end %>
+      </div>
    
    <div class='btn1'>
       <% if teacher_signed_in? %>

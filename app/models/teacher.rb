@@ -15,4 +15,10 @@ class Teacher < ApplicationRecord
   validates :images,              presence: true
 
   has_many_attached :images
+
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  has_many :teachers_subjects
+  has_many :subjects, through: :teachers_subjects
+
+  validates :subject_id, numericality: { only_integer: true, greater_than: 1 }, presence: true
 end
