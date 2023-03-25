@@ -33,7 +33,5 @@ class Science < ActiveHash::Base
     { id: 32, name: '物理',     age: 高校3年生},
   ]
   include ActiveHash::Associations
-  belongs_to :subject
-  has_many :teachers_sciences
-  has_many :teachers, through: :teachers_sciences
+  belongs_to :teacher
 end

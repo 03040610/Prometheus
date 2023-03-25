@@ -22,7 +22,5 @@ class English < ActiveHash::Base
     { id: 19, name: '構文',        age: 高校2年生},
   ]
   include ActiveHash::Associations
-  belongs_to :subject
-  has_many :teachers_englishes
-  has_many :teachers, through: :teachers_englishes
+  belongs_to :teacher
 end

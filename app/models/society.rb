@@ -18,7 +18,5 @@ class Society < ActiveHash::Base
     { id: 16, name: '政治・経済', age: 高校生},
   ]
   include ActiveHash::Associations
-  belongs_to :subject
-  has_many :teachers_societies
-  has_many :teachers, through: :teachers_societies
+  belongs_to :teacher
 end
