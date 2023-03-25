@@ -1,4 +1,4 @@
-class Math < ActiveHash::Base
+class English < ActiveHash::Base
   self.data = [
     { id: 1,  name: '---',         age: nil },
     { id: 2,  name: '英語',        age: 小学1年生},
