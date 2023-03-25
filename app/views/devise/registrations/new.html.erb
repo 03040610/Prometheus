@@ -110,13 +110,9 @@
       <p class='info-text'>※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。</p>
     </div>
 
-    <div class="column-field>
-      <%= f.text_area :column, class:"input-column", id:"input_column", placeholder:"例) 高校生です" %>
-      <div class="form-group">
-        <div class='form-bottom-text'>
-         「会員登録」のボタンを押すことにより、
-          <span>利用規約に同意したものとみなします</span>
-        </div>
+    <div class="form-group">
+      <div class='form-bottom-text'>
+       「会員登録」のボタンを押すことにより、利用規約に同意したものとみなします
       </div>
       <div class='register-btn'>
         <%= f.submit "会員登録" ,class:"register-red-btn", type: :submit %>

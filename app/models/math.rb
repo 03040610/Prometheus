@@ -23,7 +23,5 @@ class Math < ActiveHash::Base
     { id: 21, name: '数学3',      age: 高校3年生},
   ]
   include ActiveHash::Associations
-  belongs_to :subject
-  has_many :teachers_mathes
-  has_many :teachers, through: :teachers_mathes
+  belongs_to :teacher
 end
