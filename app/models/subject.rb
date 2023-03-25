@@ -11,6 +11,8 @@ class Subject < ActiveHash::Base
   include ActiveHash::Associations
   has_many :literatures
   has_many :mathes
+  has_many :englishes
+  has_many :sciences
   has_many :teachers_subjects
   has_many :teachers, through: :teachers_subjects
 end

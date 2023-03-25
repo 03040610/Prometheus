@@ -19,8 +19,18 @@ class Teacher < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_many :teachers_subjects
   has_many :subjects, through: :teachers_subjects
+
   has_many :teachers_literatures
   has_many :literatures, through: :teachers_literatures
+  
+  has_many :teachers_mathes
+  has_many :teachers, through: :teachers_mathes
+
+  has_many :teachers_englishes
+  has_many :englishes, through: :teachers_englishes
+
+  has_many :teachers_sciences
+  has_many :sciences, through: :teachers_sciences
 
   validates :subject_id, numericality: { only_integer: true, greater_than: 1 }, presence: true
   validates :literature_id, numericality: { only_integer: true, greater_than: 1 }, presence: true
