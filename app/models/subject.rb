@@ -13,6 +13,7 @@ class Subject < ActiveHash::Base
   has_many :mathes
   has_many :englishes
   has_many :sciences
+  has_many :societies
   has_many :teachers_subjects
   has_many :teachers, through: :teachers_subjects
 end

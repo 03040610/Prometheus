@@ -35,5 +35,5 @@ class Science < ActiveHash::Base
   include ActiveHash::Associations
   belongs_to :subject
   has_many :teachers_sciences
-  has_many :teachers, through: :sciences
+  has_many :teachers, through: :teachers_sciences
 end

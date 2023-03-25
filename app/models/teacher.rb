@@ -12,7 +12,7 @@ class Teacher < ApplicationRecord
   validates :last_kana_name,     presence: true, format: { with: /\A[ァ-ヶー]+\z/}
   validates :birth_day,          presence: true
   validates :column,             presence: true
-  validates :images,              presence: true
+  validates :images,             presence: true
 
   has_many_attached :images
 
@@ -31,6 +31,9 @@ class Teacher < ApplicationRecord
 
   has_many :teachers_sciences
   has_many :sciences, through: :teachers_sciences
+
+  has_many :teachers_societies
+  has_many :societies, through: :teachers_societies
 
   validates :subject_id, numericality: { only_integer: true, greater_than: 1 }, presence: true
   validates :literature_id, numericality: { only_integer: true, greater_than: 1 }, presence: true
