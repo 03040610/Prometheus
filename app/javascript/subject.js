@@ -7,7 +7,7 @@ function subject() {
   const english = document.getElementById("english-choice");
   const subject4 = document.getElementById("subject-choice4");
   const science = document.getElementById("science-choice");
-  const subject5 = document.getElementById("subject-choice4");
+  const subject5 = document.getElementById("subject-choice5");
   const society = document.getElementById("society-choice");
   
   subject1.addEventListener("input", () => {
