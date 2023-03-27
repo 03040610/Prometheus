@@ -22,7 +22,7 @@
    
    <div class='btn1'>
       <% if teacher_signed_in? %>
-        <%= link_to current_teacher.nick_name,  new_teacher_registration_path, class: "teacher-nickname" %>
+        <%= link_to current_teacher.nick_name, edit_teacher_path(current_teacher), class: "teacher-nickname" %>
         <%= link_to 'ログアウト', destroy_teacher_session_path , method: :delete, class: "logout_btn" %>
       <% else %>
         <%= link_to 'ログイン', new_teacher_session_path, class: "login_btn" %>
@@ -35,5 +35,6 @@
         <%= image_tag("ハンバーガーメニュー.png", class: "hamburger-icon") %>
       <% end %>
     </div>
+    
   </div>
 </div>

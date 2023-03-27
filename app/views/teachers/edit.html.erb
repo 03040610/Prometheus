@@ -1,0 +1,25 @@
+<%= render "shared/first_header"%>
+
+<p>本人様確認</p>
+<%= @teacher.nick_name %>さん<br>
+<%= image_tag @teacher.image, style: "width: 25vw; height: 30vh;" %><br>
+<%= @teacher.first_name %>
+<%= @teacher.last_name %>様<br>
+<%= @teacher.email %>
+
+<%= form_with model: @teacher, method: :post, url:  edit_teacher_path, local: true do |f| %>
+
+  <p>教えたい科目を選択してください（複数科目（最大5つまで）の登録も可能です）</p>
+  <%= f.collection_select(:subject1_id, Subject1.all, :id, :name, {}, {class: "select-box", id: "subject-choice1"}) %> 
+  <%= f.collection_select(:subject2_id, Subject2.all, :id, :name, {}, {class: "select-box", id: "subject-choice2"}) %> 
+  <%= f.collection_select(:subject3_id, Subject3.all, :id, :name, {}, {class: "select-box", id: "subject-choice3"}) %> 
+  <%= f.collection_select(:subject4_id, Subject4.all, :id, :name, {}, {class: "select-box", id: "subject-choice4"}) %> 
+  <%= f.collection_select(:subject5_id, Subject5.all, :id, :name, {}, {class: "select-box", id: "subject-choice5"}) %> <br>
+
+  <%= f.collection_select(:literature_id, Literature.all, :id, :name, {}, {class: "literature-box", id: "literature-choice", hidden: true}) %>
+  <%= f.collection_select(:mathematics_id,Mathematics.all,:id, :name, {}, {class: "mathematics-box",id: "mathematics-choice",hidden: true}) %>
+  <%= f.collection_select(:english_id,    English.all,    :id, :name, {}, {class: "english-box",    id: "english-choice",    hidden: true}) %>
+  <%= f.collection_select(:science_id,    Science.all,    :id, :name, {}, {class: "science-box",    id: "science-choice",    hidden: true}) %>
+  <%= f.collection_select(:society_id,    Society.all,    :id, :name, {}, {class: "society-box",    id: "society-choice",    hidden: true}) %>
+ 
+<% end %> 

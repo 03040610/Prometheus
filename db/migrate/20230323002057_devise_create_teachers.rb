@@ -4,14 +4,24 @@ class DeviseCreateTeachers < ActiveRecord::Migration[6.0]
   def change
     create_table :teachers do |t|
       ## Database authenticatable
-      t.string :email,              null: false, default: ""
-      t.string :encrypted_password, null: false, default: ""
-      t.string :nick_name,          null: false
-      t.string :first_name,         null: false
-      t.string :last_name,          null: false
-      t.string :first_kana_name,    null: false
-      t.string :last_kana_name,     null: false
-      t.date   :birth_day,          null: false
+      t.string  :email,              null: false, default: ""
+      t.string  :encrypted_password, null: false, default: ""
+      t.string  :nick_name,          null: false
+      t.string  :first_name,         null: false
+      t.string  :last_name,          null: false
+      t.string  :first_kana_name,    null: false
+      t.string  :last_kana_name,     null: false
+      t.date    :birth_day,          null: false
+      t.integer :subject1_id,        null: true
+      t.integer :subject2_id,        null: true
+      t.integer :subject3_id,        null: true
+      t.integer :subject4_id,        null: true
+      t.integer :subject5_id,        null: true
+      t.integer :literature_id,      null: true
+      t.integer :mathematics_id,            null: true
+      t.integer :english_id,         null: true
+      t.integer :science_id,         null: true
+      t.integer :society_id,         null: true
 
       ## Recoverable
       t.string   :reset_password_token

@@ -42,6 +42,16 @@ ActiveRecord::Schema.define(version: 2023_03_24_071052) do
     t.string "first_kana_name", null: false
     t.string "last_kana_name", null: false
     t.date "birth_day", null: false
+    t.integer "subject1_id"
+    t.integer "subject2_id"
+    t.integer "subject3_id"
+    t.integer "subject4_id"
+    t.integer "subject5_id"
+    t.integer "literature_id"
+    t.integer "mathematics_id"
+    t.integer "english_id"
+    t.integer "science_id"
+    t.integer "society_id"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"

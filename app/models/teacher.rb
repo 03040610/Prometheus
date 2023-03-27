@@ -11,34 +11,31 @@ class Teacher < ApplicationRecord
   validates :first_kana_name,    presence: true, format: { with: /\A[ァ-ヶー]+\z/}
   validates :last_kana_name,     presence: true, format: { with: /\A[ァ-ヶー]+\z/}
   validates :birth_day,          presence: true
-  #validates :column,             presence: true
-  #validates :images,             presence: true
+  #validates :column,            presence: true
+  validates :image,             presence: true
 
-  has_many_attached :images
+  has_one_attached :image
 
   extend ActiveHash::Associations::ActiveRecordExtensions
-  has_many :teachers_subjects
-  has_many :subjects, through: :teachers_subjects
+  has_many :subject1s
+  has_many :subject2s
+  has_many :subject3s
+  has_many :subject4s
+  has_many :subject5s
+  has_many :literaturs
+  has_many :mathematics
+  has_many :englishs
+  has_many :societys
+  has_many :sciencs
 
-  has_many :teachers_literatures
-  has_many :literatures, through: :teachers_literatures
-  
-  has_many :teachers_mathes
-  has_many :teachers, through: :teachers_mathes
-
-  has_many :teachers_englishes
-  has_many :englishes, through: :teachers_englishes
-
-  has_many :teachers_sciences
-  has_many :sciences, through: :teachers_sciences
-
-  has_many :teachers_societies
-  has_many :societies, through: :teachers_societies
-
-  #validates :subject_id,    numericality: { only_integer: true, greater_than: 1 }
-  #validates :literature_id, numericality: { only_integer: true, greater_than: 1 }
-  #validates :math_id,       numericality: { only_integer: true, greater_than: 1 }
-  #validates :english_id,    numericality: { only_integer: true, greater_than: 1 }
-  #validates :science_id,    numericality: { only_integer: true, greater_than: 1 }
-  #validates :society_id,    numericality: { only_integer: true, greater_than: 1 }
+  validates :subject1_id,   presence: true, on: :update, numericality: { only_integer: true, greater_than: 1 }
+  validates :subject2_id,   presence: true, on: :update, numericality: { only_integer: true, greater_than: 1 }
+  validates :subject3_id,   presence: true, on: :update, numericality: { only_integer: true, greater_than: 1 }
+  validates :subject4_id,   presence: true, on: :update, numericality: { only_integer: true, greater_than: 1 }
+  validates :subject5_id,   presence: true, on: :update, numericality: { only_integer: true, greater_than: 1 }
+  validates :literature_id, presence: true, on: :update, numericality: { only_integer: true, greater_than: 1 }
+  validates :mathematics_id,presence: true, on: :update, numericality: { only_integer: true, greater_than: 1 }
+  validates :english_id,    presence: true, on: :update, numericality: { only_integer: true, greater_than: 1 }
+  validates :science_id,    presence: true, on: :update, numericality: { only_integer: true, greater_than: 1 }
+  validates :society_id,    presence: true, on: :update, numericality: { only_integer: true, greater_than: 1 }
 end
