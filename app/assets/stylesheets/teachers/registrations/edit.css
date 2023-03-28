@@ -1,0 +1,13 @@
+.img-certificate-field img {
+  max-width: 40vh;
+  max-height: 20vw;
+}
+
+.image-delete-button {
+  text-align: center;
+  border: solid 1px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  width: 10vh;
+  height: 5vh;
+}

@@ -12,9 +12,17 @@ class Teacher < ApplicationRecord
   validates :last_kana_name,     presence: true, on: :create, format: { with: /\A[ァ-ヶー]+\z/}
   validates :birth_day,          presence: true, on: :create
   validates :column,             presence: true, on: :update
-  validates :image,              presence: true, on: :create
+  validates :face_image,         presence: true, on: :create
+  validate :validate_certificate_images_count
 
-  has_one_attached :image
+  has_one_attached :face_image
+  has_many_attached :certificate_images
+
+  def validate_certificate_images_count
+    if certificate_images.attached? && certificate_images.count > 5
+      errors.add(:certificate_images, "should be less than or equal to 5")
+    end
+  end
 
   extend ActiveHash::Associations::ActiveRecordExtensions
   has_many :subject1s
@@ -25,8 +33,10 @@ class Teacher < ApplicationRecord
   has_many :literatures
   has_many :mathematics
   has_many :englishs
-  has_many :societys
   has_many :sciences
+
+  has_many :teacher_societies
+  has_many :teacher, through: :
 
   validate :at_least_one_subjects_selected, on: :update
   validate :at_least_one_subject_selected, on: :update

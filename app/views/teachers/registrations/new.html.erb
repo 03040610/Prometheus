@@ -1,7 +1,7 @@
 <%= render "shared/first_header"%>
 
 
-<%= form_with model: @teacher, url: teacher_registration_path, class: 'registration-main', local: true do |f| %>
+<%= form_with model: @teacher, url: teacher_registration_path, id: 'new_registration',class: 'registration-main', local: true do |f| %>
   <div class='main-form1'>
 
     <div class='form-header'>
@@ -28,16 +28,14 @@
       <%= f.email_field :email, class:"input-default", id:"email", placeholder:"PC・携帯どちらでも可", autofocus: true %>
     </div>
 
-    <div class="img-identity-upload">
-      <div class="weight-bold-text">
-        顔写真
-        <span class="indispensable">必須</span>
+    <div class="img-identity-field">
+      <div class="bold-text">
+        顔写真は必須です
       </div>
+      <div id="previews"></div>
       <div class="click-upload">
-        <p>
-          クリックしてファイルをアップロード
-        </p>
-        <%= f.file_field :image, id:"identity-image" %>
+        <p>クリックしてファイルをアップロード</p>
+        <%= f.file_field :face_image, name: 'teacher[face_image]' %>
       </div>
     </div>
 
