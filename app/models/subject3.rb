@@ -4,5 +4,5 @@ class Subject3 < ActiveHash::Base
     { id: 2, name: '英語' },
   ]
   include ActiveHash::Associations
-  belongs_to :teacher
+  has_many :teachers
 end

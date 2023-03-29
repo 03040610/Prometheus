@@ -6,11 +6,12 @@
 .list {
   display: flex;
   flex-direction: column;
-  margin-right: 10px;
+  margin-right: 37px;
+  margin-bottom: 30px;
   border: 2px solid black;
   padding: 5px;
-  height: 30vh;
-  width: 20vw;
+  height: 200px;
+  width: 250px;
 }
 
 .nick-name {
@@ -18,7 +19,27 @@
   justify-content: center;
 }
 
+.index_image{
+  display: flex;
+  justify-content: space-between;
+}
+
 .face_image img {
-  max-height: 25vh;
-  max-width: 10vw;
+  max-height: 2000px;
+  max-width: 100px;
   }
+
+.evaluation{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pie-chart{
+  max-height: 15vh;
+  max-width: 10vw;
+}
+
+.test-score{
+  max-height: 10vh;
+  max-width: 10vw;
+}
