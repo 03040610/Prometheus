@@ -21,17 +21,13 @@
   <%= f.collection_select(:literature_id, Literature.all, :id, :name, {}, {class: "literature-box", id: "literature-choice", hidden: true}) %>
   <%= f.collection_select(:mathematics_id,Mathematics.all,:id, :name, {}, {class: "mathematics-box",id: "mathematics-choice",hidden: true}) %>
   <%= f.collection_select(:english_id,    English.all,    :id, :name, {}, {class: "english-box",    id: "english-choice",    hidden: true}) %>
+  <%= f.collection_select(:society_id,    Society.all,    :id, :name, {}, {class: "society-box",    id: "society-choice",    hidden: true}) %>
   <%= f.collection_select(:science_id,    Science.all,    :id, :name, {}, {class: "science-box",    id: "science-choice",    hidden: true}) %>
-  <%= f.collection_check_boxes(:society_ids, Society.all, :id, :name) do |cb| %>
-    <%= cb.label(class: "society-box") { cb.check_box + cb.text } %>
-  <% end %>
- 
+
   <%= f.text_area :column, class:"column-text", id:"column-name", placeholder:"商品名（必須 40文字まで)", maxlength:"40" %>
 
   <div class="img-certificate-field">
-    <div class="bold-text">
-      証明写真は任意です
-    </div>
+    <div class="bold-text"> 証明写真は任意です </div>
     <div id="previews"></div>
     <div class="click-upload">
       <p>クリックしてファイルをアップロード</p>
@@ -40,5 +36,5 @@
   </div>
 
   <%= f.submit "登録する", class:"registration-btn" %>
-  <%=link_to 'もどる', root_path, class:"back-btn" %>
-<% end %> 
+  <%= link_to 'もどる', root_path, class:"back-btn" %>
+<% end %>
