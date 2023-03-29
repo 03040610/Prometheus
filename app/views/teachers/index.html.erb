@@ -4,47 +4,48 @@
 <ul class='teacher-lists'>
   <% if @teachers.present? %>
     <% @teachers.each do |teacher| %>
-      <li class='list'>
 
-        <div class='nick-name'>
-          <%= teacher.nick_name %>
-        </div>
+        <%= link_to teacher_path(teacher), class: "list" do %>
+
+          <div class='nick-name'>
+            <%= teacher.nick_name %>
+            さん
+          </div>
       
-        <div class='index_image'>
-          <div class='face_image'>
-            <%= image_tag teacher.face_image %>
+          <div class='index_image'>
+            <div class='face_image'>
+              <%= image_tag teacher.face_image %>
+            </div>
+            <div class='chart'>
+              <%= image_tag("円グラフ.jpg", class: "pie-chart") %>
+            </div>
           </div>
-          <div class='chart'>
-            <%= image_tag("円グラフ.jpg", class: "pie-chart") %>
+
+          <div class="evaluation">
+            <div class="index_subject">
+              <% if  teacher.subject1.present? && teacher.subject1.id != 1 %>
+                <%= teacher.subject1.name %>
+              <% end %>
+              <% if  teacher.subject2.present? && teacher.subject2.id != 1 %>
+                <%= teacher.subject2.name %>
+              <% end %>
+              <% if  teacher.subject3.present? && teacher.subject3.id != 1 %>
+                <%= teacher.subject3.name %>
+              <% end %>
+              <% if  teacher.subject4.present? && teacher.subject4.id != 1 %>
+                <%= teacher.subject4.name %>
+              <% end %>
+              <% if  teacher.subject5.present? && teacher.subject5.id != 1 %>
+                <%= teacher.subject5.name %>
+              <% end %>
+            </div>
+            <div class="score">
+              <%= image_tag("点数.jpg", class: "test-score") %>
+            </div>
           </div>
-        </div>
 
-        <div class="evaluation">
-          <div class="index_subject">
-            <% if teacher.subject1.id != 1 %>
-              <%= teacher.subject1.name %>
-            <% end %>
-            <% if teacher.subject2.id != 1 %>
-              <%= teacher.subject2.name %>
-            <% end %>
-            <% if teacher.subject3.id != 1 %>
-              <%= teacher.subject3.name %>
-            <% end %>
-            <% if teacher.subject4.id != 1 %>
-              <%= teacher.subject4.name %>
-            <% end %>
-            <% if teacher.subject5.id != 1 %>
-              <%= teacher.subject5.name %>
-            <% end %>
-          </div>
-          <div class="score">
-            <%= image_tag("点数.jpg", class: "test-score") %>
-          </div>
-        </div>
+        <% end %>
 
-
-
-      </li>
     <% end %>
   <% end %>
 </ul>

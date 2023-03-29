@@ -1,5 +1,5 @@
 .first_header1{
-  margin: 0;
+  margin: 0px;
 }
 
 .header1{
@@ -45,12 +45,7 @@
   margin-right: 50px;
 }
 
-.Hamburger_menu{
-  position: absolute;
-}
 .hamburger-icon{
-  position: relative;
-  left: 1150px;
   height: 10vh;
   width: 6vw;
 }
