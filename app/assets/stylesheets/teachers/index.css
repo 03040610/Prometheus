@@ -1,0 +1,24 @@
+.teacher-lists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  border: 2px solid black;
+  padding: 5px;
+  height: 30vh;
+  width: 20vw;
+}
+
+.nick-name {
+  display: flex;
+  justify-content: center;
+}
+
+.face_image img {
+  max-height: 25vh;
+  max-width: 10vw;
+  }

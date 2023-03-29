@@ -1,2 +1,23 @@
 <%= render 'shared/first_header' %>
 <%= render 'shared/second_header' %>
+
+<ul class='teacher-lists'>
+  <% if @teachers.present? %>
+    <% @teachers.each do |teacher| %>
+      <li class='list'>
+        <div class='nick-name'>
+          <%= teacher.nick_name %>
+        </div>
+
+        <div class='face_image'>
+          <%= image_tag teacher.face_image %>
+        </div>
+
+        <div class='pie chart'>
+          <%= image_tag  %>
+        </div>
+
+      </li>
+    <% end %>
+  <% end %>
+</ul>
