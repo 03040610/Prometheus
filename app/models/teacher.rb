@@ -37,22 +37,20 @@ class Teacher < ApplicationRecord
   has_many :sciences
   has_many :societies
 
-  validate :at_least_one_subjects_selected, on: :update
-  validate :at_least_one_subject_selected, on: :update
+  #validate :at_least_one_subjects_selected, on: :update
+  ##validate :at_least_one_subjects_selected, on: :update
+  #validate :at_least_one_subject_selected, on: :update
 
-  validate :at_least_one_subjects_selected, on: :update
-  validate :at_least_one_subject_selected, on: :update
-
-  def at_least_one_subjects_selected
-    if [subject1_id, subject2_id, subject3_id, subject4_id, subject5_id].none? { |id| id > 1 }
-      errors.add(:base, "At least one subject must be selected.")
-    end
-  end
-
-  def at_least_one_subject_selected
-    if [literature_id, mathematics_id, english_id, society_id, science_id].none? { |id| id > 1 }
-      errors.add(:base, "At least one subject must be selected.")
-    end
-  end
-
+  # def at_least_one_subjects_selected
+  #   unless [subject1_id, subject2_id, subject3_id, subject4_id, subject5_id].include?(2)
+  #     errors.add(:base, "At least one subject must be selected with an id of 2.")
+  #   end
+  # end
+  
+  # def at_least_one_subject_selected
+  #   unless [literature_id, mathematics_id, english_id, society_id, science_id].include?(2)
+  #     errors.add(:base, "At least one subject must be selected with an id of 2.")
+  #   end
+  # end
+  
 end
