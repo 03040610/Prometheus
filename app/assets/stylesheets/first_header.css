@@ -1,5 +1,5 @@
 .first_header1{
-  margin: 0;
+  margin: 0px;
 }
 
 .header1{
@@ -12,43 +12,37 @@
 .Prometheus-icon{
   height: 10vh;
   width: 6vw;
+  margin-left: 20px;
+  margin-right: 120px;
 }
 
-.Key1{
-  padding: 0px 0px 0px 10vh;
-}
 
-.Key-word-icon{
-  height: 9vh;
-  width: 5vw;
-  padding: 0px 0px 0px 10vh;
-}
 
 .search-input{
   height: 8vh;
-  width: 25vw;
+  width: 30vw;
 }
 
 .search-btn{
-  height: 8vh;
+  height: 9vh;
   width: 5vw;
-  margin-right: 20vw;
+  margin-right: 150px;
 }
 
 .login_btn{
-  margin-right: 5vw;
+  margin-right: 50px;
 }
 
 .sign-up_btn{
-  margin-right: 5vw;
+  margin-right: 50px;
 }
 
 .teacher-nickname{
-  margin-right: 5vw;
+  margin-right: 50px;
 }
 
 .logout_btn{
-  margin-right: 5vw;
+  margin-right: 50px;
 }
 
 .hamburger-icon{
