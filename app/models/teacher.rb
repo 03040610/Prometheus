@@ -14,10 +14,11 @@ class Teacher < ApplicationRecord
   validates :birth_day, presence: true, on: :create
   validates :face_image, presence: true, on: :create
   validates :column, presence: true, on: :update
-  validate :validate_certificate_images_count, on: :update
+  validate  :validate_certificate_images_count, on: :update
 
   has_one_attached :face_image
   has_many_attached :certificate_images
+  has_many :rooms
 
   def validate_certificate_images_count
     if certificate_images.attached? && certificate_images.count > 5

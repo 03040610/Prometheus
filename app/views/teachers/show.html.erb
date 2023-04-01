@@ -1,0 +1,50 @@
+<%= render 'shared/first_header' %>
+
+<% if current_teacher && [@teacher.subject1&.id.to_i, @teacher.subject2&.id.to_i, @teacher.subject3&.id.to_i, @teacher.subject4&.id.to_i, @teacher.subject5&.id.to_i].all? { |id| id <= 1 } %>
+    まだ教師登録は終了していません、ニックネームが書かれているボタンを押し、ユーザー登録を完了してください
+<% end %>
+
+<div class='teacher-show'>
+
+  <div class='show-nick-name'>
+    <%= @teacher.nick_name %> さん
+  </div>
+
+  <div class='show-face-image'>
+    <%= image_tag @teacher.face_image %>
+  </div>
+
+  <div class="index_subject">
+    <% if @teacher.subject1.present? && @teacher.subject1.id != 1 %>
+      <%= @teacher.subject1.name %>
+    <% end %>
+    <% if @teacher.subject2.present? && @teacher.subject2.id != 1 %>
+      <%= @teacher.subject2.name %>
+    <% end %>
+    <% if @teacher.subject3.present? && @teacher.subject3.id != 1 %>
+      <%= @teacher.subject3.name %>
+    <% end %>
+    <% if @teacher.subject4.present? && @teacher.subject4.id != 1 %>
+      <%= @teacher.subject4.name %>
+    <% end %>
+    <% if @teacher.subject5.present? && @teacher.subject5.id != 1 %>
+      <%= @teacher.subject5.name %>
+    <% end %>
+  </div>
+
+  <div class= 'show-teaching-time'>
+    9時間
+  </div>
+
+  <div class= 'show-teaching-evaluation'>
+    4.6点
+  </div>
+
+  <div class='show-teacher-edit-path'>
+    <% if current_teacher && [@teacher.subject1&.id.to_i, @teacher.subject2&.id.to_i, @teacher.subject3&.id.to_i, @teacher.subject4&.id.to_i, @teacher.subject5&.id.to_i].all? { |id| id <= 1 } %>
+      まだ教師登録は終了していません、ニックネームが書かれているボタンを押し、ユーザー登録を完了してください
+    <% end %><br>
+    <%= link_to '編集ページ', edit_teacher_path(@teacher) %>
+  </div>
+
+</div>

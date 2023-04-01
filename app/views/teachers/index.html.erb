@@ -2,15 +2,15 @@
 <%= render 'shared/second_header' %>
 
 
-<% @teachers.each do |teacher| %>
+<% @teacher.each do |teacher| %>
   <% if current_teacher && [teacher.subject1&.id.to_i, teacher.subject2&.id.to_i, teacher.subject3&.id.to_i, teacher.subject4&.id.to_i, teacher.subject5&.id.to_i].all? { |id| id <= 1 } %>
-    まだ教師登録は終了していません、ニックネームが書かれているボタンを押し、ユーザー登録を終了してください
+    まだ教師登録は終了していません、ニックネームが書かれているボタンを押し、ユーザー登録を完了してください
   <% end %>
 <% end %>
 
 <ul class='teacher-lists'>
 
-  <% @teachers.each do |teacher| %>
+  <% @teacher.each do |teacher| %>
 
     <% if [teacher.subject1&.id.to_i, teacher.subject2&.id.to_i, teacher.subject3&.id.to_i, teacher.subject4&.id.to_i, teacher.subject5&.id.to_i].any? { |id| id >= 2 } %>
       

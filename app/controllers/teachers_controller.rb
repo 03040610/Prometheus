@@ -1,7 +1,15 @@
 class TeachersController < ApplicationController
   
   def index
-    @teachers = Teacher.all
+    @teacher = Teacher.all
+  end
+  
+  def edit
+    @teacher = Teacher.find(params[:id])
+  end
+  
+  def show
+    @teacher = Teacher.find(params[:id])
   end
 
   private
