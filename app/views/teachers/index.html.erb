@@ -14,7 +14,7 @@
 
     <% if [teacher.subject1&.id.to_i, teacher.subject2&.id.to_i, teacher.subject3&.id.to_i, teacher.subject4&.id.to_i, teacher.subject5&.id.to_i].any? { |id| id >= 2 } %>
       
-      <%= link_to teacher_path(teacher), class: "list" do %>
+      <%= link_to new_room_path, class: "list" do %>
 
         <div class='nick-name'>
           <%= teacher.nick_name %>

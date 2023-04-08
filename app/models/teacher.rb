@@ -18,7 +18,7 @@ class Teacher < ApplicationRecord
 
   has_one_attached :face_image
   has_many_attached :certificate_images
-  has_many :rooms
+  has_one :room
 
   def validate_certificate_images_count
     if certificate_images.attached? && certificate_images.count > 5
