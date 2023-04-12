@@ -14,21 +14,23 @@
 
     <% if [teacher.subject1&.id.to_i, teacher.subject2&.id.to_i, teacher.subject3&.id.to_i, teacher.subject4&.id.to_i, teacher.subject5&.id.to_i].any? { |id| id >= 2 } %>
       
-      <%= link_to new_room_path, class: "list" do %>
+      <%= link_to root_path, class: "list" do %>
 
         <div class='nick-name'>
           <%= teacher.nick_name %>
           さん
         </div>
 
-        <div class='index_image'>
-          <div class='face_image'>
-            <%= image_tag teacher.face_image %>
+        <% if teacher.face_image.attached? %>
+          <div class='index_image'>
+            <div class='face_image'>
+              <%= image_tag teacher.face_image %>
+            </div>
+            <div class='chart'>
+              <%= image_tag("円グラフ.jpg", class: "pie-chart") %>
+            </div>
           </div>
-          <div class='chart'>
-            <%= image_tag("円グラフ.jpg", class: "pie-chart") %>
-          </div>
-        </div>
+        <% end %>
 
         <div class="evaluation">
           <div class="index_subject">
