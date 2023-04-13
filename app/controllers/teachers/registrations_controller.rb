@@ -16,7 +16,6 @@ class Teachers::RegistrationsController < Devise::RegistrationsController
     if @teacher.update(teacher_params)
       redirect_to root_path
     else
-      @teacher.destroy
       render :edit
     end
   end
@@ -35,3 +34,4 @@ class Teachers::RegistrationsController < Devise::RegistrationsController
     edit_teacher_registration_path
   end
 end
+
